@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fixed Layout</title>
+  <style>
+   
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .navbar {
+      background-color: #333;
+    }
+
+    .navbar ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+    }
+
+    .navbar li {
+      margin: 0 1rem;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+    }
+
+    .navbar a:hover {
+      background-color: #575757;
+      border-radius: 5px;
+    }
+
+  
+    .content {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 2rem;
+    }
+
+    .left-column, .right-column {
+      background: white;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      flex: 1; 
+    }
+
+   
+    .footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #333;
+      color: white;
+      margin-top: 2rem;
+    }
+
+   
+    @media (max-width: 768px) {
+      .content {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1>Welcome to My Webpage</h1>
+  </header>
+  <nav class="navbar">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <main class="content">
+    <section class="left-column">
+      <h2>About Us</h2>
+      <p>This is the left column where information about us goes.</p>
+    </section>
+    <section class="right-column">
+      <h2>Latest News</h2>
+      <p>This is the right column with the latest updates.</p>
+    </section>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2024 My Webpage. All rights reserved.</p>
+  </footer>
+</body>
+</html>
